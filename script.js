@@ -36,7 +36,7 @@ let projects = [
         des: "A responsive portfolio website showcasing my skills projects, and contact details in an interactive way (Fully resposive).",
         frontend: "HTML5, CSS, Bootstrap, JavaScript",
         api: "not use",
-        url: "",
+        url: "https://prem-singh333.github.io/portfolio-website/",
         img: "assits/Screenshot 2025-02-17 230722.png",
 
     },
