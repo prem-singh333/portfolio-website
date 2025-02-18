@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Portfolio - show my skills and projects</title>
+</head>
+
+<body>
+
+    <!-- ========== Header Section Start ========== -->
+
+    <nav class="navbar inverse">
+        <div class="logo">
+            <img src="assits/image1.jpg">
+        </div>
+
+        <ul class="nav navbar-nav">
+            <li><a href="#" onclick="showPage('home')" class="active px-2 py-1 links">home</a></li>
+            <li><a href="#" onclick="showPage('about')" class="px-2 py-1 links">about</a></li>
+            <li><a href="#" onclick="showPage('project')" class="px-2 py-1 links">project</a></li>
+            <li><a href="#" onclick="showPage('contact')" class="px-2 py-1 links">contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== Header Section End ========== -->
+
+    <!-- ========== Home Section Start ========== -->
+
+    <section class="container-fluid home-section" id="home">
+
+        <div class="container-sm content">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="mainText">
+                        <h3 class="h3 font-weight-light">Hello, I'm <span>Prem Kr. Singh</span></h3>
+                        <h6 class="h6 font-weight-light">I am a <b>Frontend Developer</b></h6>
+                    </div>
+                    <p class="font-weight-lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+                        quis dolore itaque velit ullam dicta sit commodi maiores magnam in quaerat, recusandae corrupti
+                        iusto cum reiciendis temporibus repudiandae doloribus? Animi molestiae sint, placeat blanditiis
+                        nam repellat dolorem dicta amet iusto provident! Veritatis blanditiis, eligendi sit quos hic quo
+                        error temporibus!</p>
+
+                    <button type="button" onclick="showPage('contact')" class="btn shadow-none focus-ring">hire
+                        me</button>
+
+                    <a href="/assits//Resume(final).pdf" target="_blank"
+                        class="btn shadow-none focus-ring ml-4">Download CV</a>
+                </div>
+                <div class="col-md-5">
+                    <div class="image p-4">
+                        <img src="assits/image1.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Home Section End ========== -->
+
+    <!-- ========== About Section Start ========== -->
+
+    <section class="container-fluid sections" id="about">
+        <div class="container-sm about">
+            <div class="row">
+                <h1 class="h1 font-weight-light py-2">About</h1>
+            </div>
+
+            <div class="row my-5 para-div">
+                <div class="col-md-12">
+                    <p class="font-weight-lighter">
+                        Hello! I'm <span class="font-weight-bold">Prem Kr. Singh</span> a third-year student pursuing
+                        B-Tech at MITM (JUT) and a frontend developer passionate about building dynamic and creating
+                        responsive web applications. I enjoy creating intuitive user interfacec and bringing designs to
+                        life with clean, efficient code.
+                    </p>
+
+                    <p class="font-weight-lighter">
+                        Currently I am focusing on sharpening my skills in modern frontend technologies like Angular and
+                        exploring new ways to enhence user experience. I'm excited to contribute to innovative projects
+                        and collaborate with like-minded developers in the tech community.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <h1 class="h1 font-weight-light py-2 skills">Skills</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-12 skills-div">
+                    <p class="font-weight-lighter"><b>Languages:</b> HTML5, Vanila CSS,
+                        JavaScript, C++</p>
+                    <p class="font-weight-lighter skill-text"><b>Frameworks:</b> Bootstrap, Angular</p>
+                    <p class="font-weight-lighter skill-text"><b>Tools:</b> VS Code, Figma</p>
+                    <p class="font-weight-lighter skill-text"><b>Platform:</b> Github</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== About Section End ========== -->
+
+    <!-- ========== Project Section Start ========== -->
+
+    <section class="container-fluid sections" id="project">
+        <div class="container-sm projects">
+            <div class="row">
+                <h1 class="h1 font-weight-light py-2">Project</h1>
+            </div>
+
+            <div class="row" id="projects-container"></div>
+        </div>
+    </section>
+
+    <!-- ========== Project Section End ========== -->
+
+    <!-- ========== Contact Section Start ========== -->
+
+    <section class="container-fluid sections" id="contact">
+        <div class="container-sm contact">
+            <div class="row">
+                <h1 class="h1 font-weight-light py-2">Contact</h1>
+            </div>
+
+            <form class="row" id="contactForm">
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" placeholder="Enter your full name" name="name" id="name"
+                            class="form-control shadow-none focus-ring" minlength="3" maxlength="30" required>
+                        <span id="nameError" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Enter your email" name="email" id="email"
+                            class="form-control shadow-none focus-ring" required>
+                        <span id="emailError" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" placeholder="Subject" name="subject" id="subject"
+                            class="form-control shadow-none focus-ring" required>
+                        <span id="subError" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="number">Phn Number</label>
+                        <input type="number" placeholder="Enter your number" name="number" id="number"
+                            class="form-control shadow-none focus-ring" required>
+                        <span id="numError" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" placeholder="Write tour message" rows="4"
+                            class="form-control shadow-none focus-ring" required></textarea>
+                        <span id="msgError" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <button id="btnSubmit" type="submit" class="btn shadow-none focus-ring">Send Message</button>
+            </form>
+
+            <div class="px-2 py-2 bg-success" id="notify">
+                <p class="text-white text-center m-0">successfuly submited</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== Contact Section End ========== -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
